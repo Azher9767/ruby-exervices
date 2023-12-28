@@ -23,15 +23,13 @@ RSpec.describe "repeat_str" do
   end
 end
 
+=begin
+ the solution so that it reverses the string passed into it.
 
-
-#======================================================================================================================
-
-# the solution so that it reverses the string passed into it.
-
-# for example
-#'world'  =>  'dlrow'
-#'word'   =>  'drow' 
+for example
+'world'  =>  'dlrow'
+'word'   =>  'drow' 
+=end
 
 RSpec.describe "Fixed tests" do
   def solution(str)
@@ -53,7 +51,4 @@ RSpec.describe "Fixed tests" do
   it "should pass fixed tests" do
     expect(solution('h')).to eq('h') 
   end
-end 
- 
-    
-  
+end
