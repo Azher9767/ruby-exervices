@@ -52,3 +52,21 @@ RSpec.describe "Fixed tests" do
     expect(solution('h')).to eq('h') 
   end
 end
+
+=begin
+- We need a function that can transform a number (integer) into a string.
+- What ways of achieving this do you know?
+Examples (input --> output):
+123  --> "123"
+999  --> "999"
+-100 --> "-100" 
+=end
+RSpec.describe "Solution" do
+  def number_to_string(num)
+    num.to_s
+  end
+
+  it "Fixed tests" do
+    expect(number_to_string(67)).to eq('67')
+  end
+end
