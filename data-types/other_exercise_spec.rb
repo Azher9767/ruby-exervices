@@ -1,11 +1,14 @@
 #date 06/01/2024
 
-color = ["Red", "Green", "Blue", "White"]
+RSpec.describe "Array practice" do
+  let(:color) { ["Red", "Green", "Blue", "White"] }
 
-# check green and pinck color is present  or not
+  specify do
+    expect(color.include?"Green").to eq(true)
+  end
 
-print color.include?"Green"
-print color.include?("pink")
+  specify { expect(color.exclude?("pink")).to eq(true) }
+end
 
 #=====================================================================================
 #  Write a Ruby program to check whether 7 appears as either the first or last element in a #given array. The array length must be 1 or more.
