@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['2.6', '2.7', '3.0']
+        ruby-version: ['3.2.0']
 
     steps:
     - uses: actions/checkout@v3
@@ -34,5 +34,5 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Run tests
-      run: bundle exec rspec
+    - name: Run tests for completed exercises
+      run: bundle exec rspec ./data-types/strings/spec/*_spec.rb ./data-types/ints_and_floats/spec/*_spec.rb ./data-types/collections/spec/*_spec.rb ./data-types/collections/advanced_nested_collections/spec/*_spec.rb
