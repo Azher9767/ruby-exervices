@@ -35,4 +35,5 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests for completed exercises
-      run: bundle exec rspec ./data-types/strings/spec/*_spec.rb ./data-types/ints_and_floats/spec/*_spec.rb ./data-types/collections/spec/*_spec.rb ./data-types/collections/advanced_nested_collections/spec/*_spec.rb ./iteration/exercises/spec/*_spec.rb
+      run: bundle exec rspec data-types/**/spec/*_spec.rb iteration/exercises/spec/*_spec.rb 
+      #enumerables/exercises_1/spec/*_spec.rb
