@@ -1,11 +1,10 @@
 class Bag
-  #attr_accessor :candies
   def initialize
     @candies = []
   end
 
   def empty? 
-   @candies.empty? 
+    @candies.empty? 
   end
 
   def count
@@ -23,10 +22,4 @@ class Bag
   def contains?(name)
     @candies.any? {|candy| candy.type == name}
   end
-  
-  # def totat_count
-  #   total = []
-  #   total += @candies 
-    
-  # end
 end
