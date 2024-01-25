@@ -8,7 +8,7 @@ RSpec.describe Candy do
     expect(candy.type).to eq('Skittles')
   end
 
-  xit 'can have a different type' do
+  it 'can have a different type' do
     candy = Candy.new('Mars')
 
     expect(candy.type).to eq('Mars')
