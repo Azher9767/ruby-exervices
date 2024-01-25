@@ -8,10 +8,10 @@ class TrickOrTreater
   def dressed_up_as
     @costume.style
   end
-
   # def bag
   #   @bag = Bag.new
   # end
+
   def has_candy?
     if @bag == nil
       return false 

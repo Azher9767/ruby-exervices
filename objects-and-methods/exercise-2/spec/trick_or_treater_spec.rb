@@ -8,6 +8,7 @@ RSpec.describe TrickOrTreater do
   it 'wears a costume' do
     costume = Costume.new('Cowboy')
     trick_or_treater = TrickOrTreater.new(costume)
+    
     expect(trick_or_treater.dressed_up_as).to eq('Cowboy')
   end
 
