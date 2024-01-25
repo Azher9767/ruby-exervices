@@ -22,7 +22,6 @@ class TrickOrTreater
     return 0 if @bag.nil?
       
     @bag.candies.count
-    end
   end
 
   def eat
