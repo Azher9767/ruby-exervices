@@ -1,6 +1,7 @@
 require 'byebug'
 class TrickOrTreater
   attr_accessor :bag, :sugar_level
+
   def initialize(costume)
     @costume = costume
     @bag = Bag.new
@@ -12,18 +13,15 @@ class TrickOrTreater
   end
 
   def has_candy?
-    if @bag == nil
-      return false 
-    else
-      !@bag.candies.empty?
-    end
+    return false if @bag.nil?
+     
+    !@bag.candies.empty?
   end
 
   def candy_count
-    if @bag == nil
-      return 0
-    else
-      @bag.candies.count
+    return 0 if @bag.nil?
+      
+    @bag.candies.count
     end
   end
 

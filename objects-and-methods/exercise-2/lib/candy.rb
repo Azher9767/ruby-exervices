@@ -1,5 +1,6 @@
 class Candy
   attr_accessor :sugar, :type
+  
   def initialize(type, sugar = 100)
     @type = type 
     @sugar = sugar
