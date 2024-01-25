@@ -8,8 +8,8 @@ require_relative '../lib/trick_or_treater'
 RSpec.describe TrickOrTreater do
   it 'wears a costume' do
     costume = Costume.new('Cowboy')
-    
     trick_or_treater = TrickOrTreater.new(costume)
+
     expect(trick_or_treater.dressed_up_as).to eq('Cowboy')
   end
 
@@ -27,12 +27,12 @@ RSpec.describe TrickOrTreater do
 
   it 'has an empty bag, so no candies' do
     trick_or_treater = TrickOrTreater.new(Costume.new("Knight"))
+
     expect(trick_or_treater.has_candy?).to be false
   end
 
   it 'can get candies' do
-    trick_or_treater = TrickOrTreater.new(Costume.new('Spaceship Mechanic'))
-     
+    trick_or_treater = TrickOrTreater.new(Costume.new('Spaceship Mechanic')) 
     trick_or_treater.bag << Candy.new('Gummy bears')
 
     expect(trick_or_treater.has_candy?).to be true

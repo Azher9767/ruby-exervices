@@ -1,5 +1,4 @@
 class Bag
-
   attr_reader :candies
   def initialize
     @candies =[]
@@ -37,7 +36,5 @@ class Bag
     else
       @candies.shift(number)
     end
-
-    
   end
 end

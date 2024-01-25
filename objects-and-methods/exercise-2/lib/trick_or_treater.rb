@@ -28,12 +28,11 @@ class TrickOrTreater
   end
 
   def eat
-  
     x = @bag.candies.pop
     @sugar_level += x.sugar
   end
 
   def sugar_level
-   @sugar_level
+    @sugar_level
   end
 end
