@@ -1,5 +1,6 @@
 class Bag
   attr_reader :candies
+  
   def initialize
     @candies =[]
   end
@@ -31,10 +32,8 @@ class Bag
   end
 
   def take(number)
-    if number == 1
-      return @candies.last
-    else
-      @candies.shift(number)
-    end
+    return @candies.last if number == 1
+
+    @candies.shift(number)
   end
 end
