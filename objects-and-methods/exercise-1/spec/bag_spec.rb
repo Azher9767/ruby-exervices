@@ -43,7 +43,6 @@ RSpec.describe Bag do
     # We'll talk about it more in a few weeks.
     # It's important to understand how these methods work, though.
     type = bag.candies.first.type
-
     expect(type).to eq("Hershey's Kisses")
   end
 
