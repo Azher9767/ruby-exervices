@@ -14,7 +14,7 @@ class Car
   end
 
   def stop 
-    "car stop"
+    engine = Engine.new.stop
   end
 end
 
@@ -24,7 +24,7 @@ class Engine
   end
 
   def stop
-    "engine stop"
+    "Car engine stop"
   end
 end
 
@@ -35,9 +35,9 @@ RSpec.describe "Car and engine relationship" do
       expect(car.start).to eq("Now Car engine start")
     end
 
-    xit "implement car class and its method" do
+    it "implement car class and its method" do
       car = Car.new 
-      expect(car.stop).to eq("car stop")
+      expect(car.stop).to eq("Car engine stop")
     end
   end
 
