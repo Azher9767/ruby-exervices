@@ -19,7 +19,9 @@ class Car
 end
 
 class Engine 
-  def
+  def start 
+    "Engine start"
+  end
 end
 
 RSpec.describe "Car and engine relationship" do 
