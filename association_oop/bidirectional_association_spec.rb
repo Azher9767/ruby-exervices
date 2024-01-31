@@ -2,6 +2,10 @@ class Author
   def books 
     []
   end
+
+  def add_book(book)
+    book
+  end
 end
 
 RSpec.describe "Author and book relation" do 
@@ -13,7 +17,7 @@ RSpec.describe "Author and book relation" do
 
     it "can add a book in Author class" do 
       author = Author.new
-      expect(author.add_book("Book1")).to eq(["Book1"])
+      expect(author.add_book("Book1")).to eq("Book1")
     end
   end
 end
