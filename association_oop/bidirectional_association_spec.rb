@@ -12,6 +12,9 @@ class Author
   end
 end
 
+class Book  
+end
+
 RSpec.describe "Author and book relation" do 
   context "Implementation of classes" do 
     it "can add class Author" do 
@@ -28,6 +31,7 @@ RSpec.describe "Author and book relation" do
   context "implementation of class another class" do 
     it "can add class and their methods" do 
       book = Book.new
+
     end
   end
 end
