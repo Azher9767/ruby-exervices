@@ -42,5 +42,10 @@ RSpec.describe "Car and engine relationship" do
       engine = Engine.new
       expect(engine.start).to eq("Engine start")
     end
+
+    it "implement engine class and its method" do 
+      engine = Engine.new 
+      expect(engine.stop).to eq("engine stop")
+    end
   end
 end
