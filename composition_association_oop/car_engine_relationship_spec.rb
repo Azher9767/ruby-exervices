@@ -9,12 +9,16 @@ Coding Task: Implement the Car and Engine classes with the described methods. Sh
 =end
 
 class Car 
+  def initialize
+    @engine = Engine.new
+  end
+
   def start
-    engine = Engine.new.start
+    @engine.start
   end
 
   def stop 
-    engine = Engine.new.stop
+    @engine.stop
   end
 end
 
