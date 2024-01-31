@@ -24,4 +24,10 @@ RSpec.describe "Author and book relation" do
       expect(author.add_book("Book1")).to eq(["Book1"])
     end
   end
+
+  context "implementation of class another class" do 
+    it "can add class and their methods" do 
+      book = Book.new
+    end
+  end
 end
