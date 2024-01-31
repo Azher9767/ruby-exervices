@@ -8,6 +8,12 @@ Coding Task: Implement the Car and Engine classes with the described methods. Sh
  a Car object will also create and destroy the associated Engine object.
 =end
 
+class Car 
+  def start
+    "car started"
+  end
+end
+
 RSpec.describe "Car and engine relationship" do 
   it "Implement car and engine class" do 
     car = Car.new
