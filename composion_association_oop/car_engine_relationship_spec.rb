@@ -15,8 +15,14 @@ class Car
 end
 
 RSpec.describe "Car and engine relationship" do 
-  it "Implement car and engine class" do 
+  context "Implement car and engine class"
+  it "implement car class and its method" do 
     car = Car.new
     expect(car.start).to eq("car started")
+  end
+
+  it "implement car class and its method" do
+    car = Car.new 
+    expect(car.stop).to eq("car stop")
   end
 end
