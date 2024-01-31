@@ -1,4 +1,7 @@
 class Author 
+  def books 
+    []
+  end
 end
 
 RSpec.describe "Author and book relation" do 
