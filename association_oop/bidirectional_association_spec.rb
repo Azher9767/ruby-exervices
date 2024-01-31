@@ -1,10 +1,14 @@
 class Author 
+  def initialize
+    @books = []
+  end
+
   def books 
-    []
+    @books
   end
 
   def add_book(book)
-    book
+    @books << book
   end
 end
 
