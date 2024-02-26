@@ -13,4 +13,39 @@
 6:- Problem statement: 
 
 Create a program that takes a list of student names and their corresponding scores as input. Calculate the average score for each student and store it in a hash. Sort the hash by average score in descending order and display the student names along with their average scores.
+===================================================================================================================================
+                                        2nd Exercise
+===================================================================================================================================
 
+1 : ==>>
+
+Given a nested hash representing a company's employee data, write a method that takes in the hash and returns the total number of employees in the company.
+
+Example Input:
+company_data = 
+            {
+                engineering: { engineers: 10, managers: 3 },
+                marketing: { marketers: 6, managers: 2 }
+            }
+==================================================================================================================================
+
+2:- 
+Create a nested hash structure in Ruby that represents a car dealership. The dealership has multiple locations, each of which has multiple car brands, and each brand has multiple car models. Include information such as the price and available colors for each car model.
+
+    Calculate the average price of all car models in the dealership.
+    Calculate the total number of car models available in all locations.
+    Calculate the number of different car brands available in each location.
+    Calculate the total number of available colors for all car models.
+    Calculate the total revenue if all cars in the dealership are sold at their listed prices..
+=======================================================================================================================================
+
+3:
+    Create a hash representing a company's employees and their departments. The key is the department name and the value is another hash containing the employee name as key and their job title as value. Your task is to write a method that returns a list of all job titles for a given department.
+
+========================================================================================================================================
+    4:
+     sCreate a nested hash that represents information about a person. The hash should contain the person's name, age, and a hash of their favorite foods with the food names as keys and the ratings as values.
+=====================================================================================================================================
+
+5: 
+    Write a Ruby program that takes information about students and their subjects along with their corresponding grades. The program should calculate the average grade for each student.
