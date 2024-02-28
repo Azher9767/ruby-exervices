@@ -14,6 +14,13 @@ class NestedHash
 
   def remove_permission(resource, user, permission)
     @data[resource][user].delete(permission)
+    if @data[resource][user].length == 0
+      @data[resource].delete(user) 
+    end
+
+    if @data[resource][user].nil?
+      @data.delete(resource)
+    end
     @data
   end
 

@@ -84,6 +84,7 @@ RSpec.describe "company data" do
         "database1" => {"carol" => ["write"], "alice" => ["read"]} 
       }
     end
+
     it "remove permission to resource" do 
       hash = NestedHash.new
       expect(hash.remove_permission("database1", "carol", "delete")).to eq(expected_acl)
