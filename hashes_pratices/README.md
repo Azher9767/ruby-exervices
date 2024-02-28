@@ -172,3 +172,56 @@ acl = {
 #### Submission:
 
 Please submit your Ruby script that defines the ACL nested hash and includes the implementation of the required methods. Include comments to explain your logic where necessary.
+
+===========================================================================================================================
+                  wednesday practice
+=========================================================================================================================
+
+
+In this task, you will develop a part of a School Directory Management System using Ruby. The system will manage information about students, teachers, and classes using nested hashes and arrays. You will need to implement functionality to add, update, and query this information efficiently.
+
+#### Requirements:
+
+1. **Data Structure**:
+   - The system should maintain a nested hash structure where the top-level keys are school class names (e.g., "Math101", "History202").
+   - The value for each class key is another hash with two keys: `:students` and `:teachers`.
+     - `:students` is an array of hashes, each representing a student with keys `:name` and `:id`.
+     - `:teachers` is an array of names (strings) of teachers.
+
+2. **Implement Functionality**:
+   - **Adding/Updating Classes**:
+     - `add_class(class_name)`: Adds a new class to the directory if it doesn't already exist.
+     - `update_class(class_name, students, teachers)`: Updates the list of students and teachers for a class. This should overwrite existing data.
+   - **Managing Students and Teachers**:
+     - `add_student_to_class(class_name, student_name, student_id)`: Adds a new student to a class. Avoid duplicate student IDs within the same class.
+     - `remove_student_from_class(class_name, student_id)`: Removes a student from a class based on their ID.
+     - `add_teacher_to_class(class_name, teacher_name)`: Adds a new teacher to a class, avoiding duplicates.
+     - `remove_teacher_from_class(class_name, teacher_name)`: Removes a teacher from a class.
+   - **Queries**:
+     - `list_students(class_name)`: Returns a list of all students (names and IDs) in a class.
+     - `list_teachers(class_name)`: Returns a list of all teachers in a class.
+     - `find_student(student_id)`: Searches through all classes and returns the name of the class the student with the given ID is enrolled in.
+
+3. **Bonus Challenges**:
+   - Implement a method `student_class_enrollment(student_name)` that returns a list of all classes a student is enrolled in.
+   - Implement data validation to ensure student IDs are unique across the entire directory, not just within a single class.
+
+#### Example Usage:
+
+```ruby
+directory = SchoolDirectory.new
+directory.add_class("Math101")
+directory.add_student_to_class("Math101", "Alice", 1001)
+directory.add_teacher_to_class("Math101", "Mr. Brown")
+directory.update_class("History202", [{name: "Bob", id: 2002}], ["Ms. Smith"])
+puts directory.list_students("Math101")
+# Expected output: [{name: "Alice", id: 1001}]
+puts directory.list_teachers("Math101")
+# Expected output: ["Mr. Brown"]
+puts directory.find_student(1001)
+# Expected output: "Math101"
+```
+
+#### Submission:
+
+Please submit your Ruby script that defines the `SchoolDirectory` class, including implementations for the required methods. Make sure your code is well-commented to explain your logic and choices, especially for data validation and handling edge cases.
