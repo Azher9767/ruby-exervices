@@ -10,7 +10,7 @@ class SchoolDirectory
 
   def add_student_to_class(class_name, student_name, student_id)
     @school[class_name]["student"] = []
-    @school[class_name]["student"] << student_name << student_id
+    @school[class_name]["student"] = [{"name" => student_name, "id" => student_id}]
     @school
   end
 
@@ -22,8 +22,8 @@ class SchoolDirectory
 
   def remove_student_from_class(class_name, student_id)
     @school[class_name].each do |key, val| 
-      val.each do |key|  
-        if key == student_id
+      val[0].each do |k1, v1|  
+        if v1 == student_id
           @school[class_name].delete("student")
         end
       end
