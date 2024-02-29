@@ -120,7 +120,7 @@ Expected Output:
     }
 ======================================================================================================================
 
-### Question: Access Control List (ACL) Implementation
+### Question: Access Control List (ACL) Implementation 
 
 In this task, you are required to implement an Access Control List (ACL) using Ruby's nested hashes. An ACL is used to define which users have access to various resources within a system. Each resource can have multiple users, and each user can have different levels of access (e.g., read, write, delete).
 
@@ -225,3 +225,43 @@ puts directory.find_student(1001)
 #### Submission:
 
 Please submit your Ruby script that defines the `SchoolDirectory` class, including implementations for the required methods. Make sure your code is well-commented to explain your logic and choices, especially for data validation and handling edge cases.
+
+
+=========================================================================================================================
+                                         Logs hash practice
+=======================================================================================================================
+
+Question: Custom Log Parser and Reporter
+You are tasked with creating a Ruby script to parse and analyze logs from a web application. The log files are in a simple text format, where each line represents a single request and contains delimited fields. Your goal is to process this log, extract meaningful information, and produce a summary report.
+
+Log Format
+Each line in the log file follows this format:
+
+timestamp | request_id | path | status | response_time
+timestamp is the time at which the request was made (in any standard date-time format).
+request_id is a unique identifier for the request.
+path is the URL path that was accessed.
+status is the HTTP status code returned.
+response_time is the time taken to respond to the request in milliseconds.
+Requirements
+Parsing Functionality: Write a method parse_log(log_content) that takes the raw log content (as a string) and converts it into a structured format, such as an array of hashes, with each hash representing a single log entry.
+
+Analysis and Reporting: Implement the following analysis functions:
+
+average_response_time(log_entries): Calculates and returns the average response time for all requests.
+count_by_status_code(log_entries): Returns a hash where each key is an HTTP status code and its value is the count of requests with that status code.
+most_frequent_request_path(log_entries): Identifies the most frequently accessed path and returns it along with the number of accesses.
+Error Handling: Ensure your script gracefully handles malformed log entries and logs with unexpected data formats.
+
+Example Input
+"2023-03-15T12:00:00 | abc123 | /home | 200 | 250\n2023-03-15T12:00:05 | def456 | /contact | 200 | 190\n2023-03-15T12:00:10 | ghi789 | /home | 500 | 300"
+Expected Output
+For the above input, your analysis functions might return:
+
+Average response time: 246.67ms (assuming you format the output to 2 decimal places)
+Count by status code: { "200" => 2, "500" => 1 }
+Most frequent request path: "/home", 2 accesses
+Submission
+Please submit your Ruby script with the parsing, analysis, and reporting functionalities implemented. Ensure your code is well-commented, especially for the parts where you handle parsing and data aggregation. Also, include a few example log entries as a string in your script to demonstrate how your functions work.
+
+This question requires a good understanding of Ruby's string manipulation, array and hash handling, enumerable methods, and basic error handling. It offers a practical scenario that reflects real-world tasks you might encounter as a Ruby developer.
